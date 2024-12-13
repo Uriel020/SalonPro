@@ -1,0 +1,77 @@
+-- Creación de la base de datos
+--CREATE DATABASE Salon;
+--GO
+
+USE Salon;
+GO
+
+-- Tabla Cliente
+CREATE TABLE Cliente (
+    IdCliente INT PRIMARY KEY IDENTITY,
+    Nombre NVARCHAR(100) NOT NULL,
+    Apellido NVARCHAR(100) NOT NULL,
+    Sexo CHAR(1),
+    Email NVARCHAR(100),
+    UltimaVisita DATETIME,
+    Estatus NVARCHAR(50),
+    FechaNacimiento DATE,
+    Telefono NVARCHAR(15),
+    Foto VARBINARY(MAX)
+);
+
+-- Tabla Categoria
+CREATE TABLE Categoria (
+    NumCategoria INT PRIMARY KEY IDENTITY,
+    Nombre NVARCHAR(100) NOT NULL
+);
+
+-- Tabla TipoServicio
+CREATE TABLE TipoServicio (
+    NumTipoServicio INT PRIMARY KEY IDENTITY,
+    NumCategoria INT NOT NULL,
+    Nombre NVARCHAR(100) NOT NULL,
+    FOREIGN KEY (NumCategoria) REFERENCES Categoria(NumCategoria)
+);
+
+-- Tabla Servicios
+CREATE TABLE Servicios (
+    NumServicios INT PRIMARY KEY IDENTITY,
+    NumTipoServicio INT NOT NULL,
+    Descripcion NVARCHAR(255),
+    Precio DECIMAL(10, 2) NOT NULL,
+    PrecioOferta DECIMAL(10, 2),
+    Personal NVARCHAR(100),
+    Estado NVARCHAR(50),
+    FOREIGN KEY (NumTipoServicio) REFERENCES TipoServicio(NumTipoServicio)
+);
+
+-- Tabla Personal
+CREATE TABLE Personal (
+    IdPersonal INT PRIMARY KEY IDENTITY,
+    Nombre NVARCHAR(100) NOT NULL,
+    Apellido NVARCHAR(100) NOT NULL,
+    TipoDocumento NVARCHAR(50),
+    Documento NVARCHAR(50) UNIQUE,
+    Direccion NVARCHAR(255),
+    Email NVARCHAR(100),
+    Estatus NVARCHAR(50),
+    FechaNacimiento DATE,
+    Telefono NVARCHAR(15),
+    Especialidad NVARCHAR(100)
+);
+
+-- Tabla Cita
+CREATE TABLE Cita (
+    NumCita INT PRIMARY KEY IDENTITY,
+    IdCliente INT NOT NULL,
+    NumServicios INT NOT NULL,
+    IdPersonal INT NOT NULL,
+    FechaHoraCita DATETIME NOT NULL,
+    EstadoCita NVARCHAR(50),
+    MontoPagar DECIMAL(10, 2),
+    Comentario NVARCHAR(255),
+    Duracion INT,
+    FOREIGN KEY (IdCliente) REFERENCES Cliente(IdCliente),
+    FOREIGN KEY (NumServicios) REFERENCES Servicios(NumServicios),
+    FOREIGN KEY (IdPersonal) REFERENCES Personal(IdPersonal)
+);
