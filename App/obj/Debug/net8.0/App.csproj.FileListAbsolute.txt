@@ -1,0 +1,5 @@
+C:\Users\uriel\OneDrive\Escritorio\Programas\C++\SalonPro_core\App\obj\Debug\net8.0\App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\uriel\OneDrive\Escritorio\Programas\C++\SalonPro_core\App\obj\Debug\net8.0\App.AssemblyInfoInputs.cache
+C:\Users\uriel\OneDrive\Escritorio\Programas\C++\SalonPro_core\App\obj\Debug\net8.0\App.AssemblyInfo.cs
+C:\Users\uriel\OneDrive\Escritorio\Programas\C++\SalonPro_core\App\obj\Debug\net8.0\App.csproj.CoreCompileInputs.cache
+C:\Users\uriel\OneDrive\Escritorio\Programas\C++\SalonPro_core\App\obj\Debug\net8.0\App.csproj.AssemblyReference.cache
