@@ -46,42 +46,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PagAdmin.cs">
+    <Compile Include="Admin\AgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PagAdmin.Designer.cs">
+    <Compile Include="Admin\AgregarUsuario.Designer.cs">
+      <DependentUpon>AgregarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PagAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\PagAdmin.Designer.cs">
       <DependentUpon>PagAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Contraseña.cs">
+    <Compile Include="Usuario\Contraseña.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Contraseña.Designer.cs">
+    <Compile Include="Usuario\Contraseña.Designer.cs">
       <DependentUpon>Contraseña.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Usuario\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Usuario\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PagUsuario.cs">
+    <Compile Include="Usuario\PagUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PagUsuario.Designer.cs">
+    <Compile Include="Usuario\PagUsuario.Designer.cs">
       <DependentUpon>PagUsuario.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="PagAdmin.resx">
+    <EmbeddedResource Include="Admin\AgregarUsuario.resx">
+      <DependentUpon>AgregarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\PagAdmin.resx">
       <DependentUpon>PagAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Contraseña.resx">
+    <EmbeddedResource Include="Usuario\Contraseña.resx">
       <DependentUpon>Contraseña.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Usuario\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PagUsuario.resx">
+    <EmbeddedResource Include="Usuario\PagUsuario.resx">
       <DependentUpon>PagUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

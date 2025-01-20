@@ -11,3 +11,4 @@ C:\Users\uriel\OneDrive\Escritorio\Programas\C++\SalonPro_core\Caja\obj\Debug\Ca
 C:\Users\uriel\OneDrive\Escritorio\Programas\C++\SalonPro_core\Caja\obj\Debug\Caja.Contraseña.resources
 C:\Users\uriel\OneDrive\Escritorio\Programas\C++\SalonPro_core\Caja\obj\Debug\Caja.PagAdmin.resources
 C:\Users\uriel\OneDrive\Escritorio\Programas\C++\SalonPro_core\Caja\obj\Debug\Caja.PagUsuario.resources
+C:\Users\uriel\OneDrive\Escritorio\Programas\C++\SalonPro_core\Caja\obj\Debug\Caja.Admin.AgregarUsuario.resources
