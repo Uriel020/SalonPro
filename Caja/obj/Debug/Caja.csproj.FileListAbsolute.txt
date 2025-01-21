@@ -12,3 +12,17 @@ C:\Users\uriel\OneDrive\Escritorio\Programas\C++\SalonPro_core\Caja\obj\Debug\Ca
 C:\Users\uriel\OneDrive\Escritorio\Programas\C++\SalonPro_core\Caja\obj\Debug\Caja.PagAdmin.resources
 C:\Users\uriel\OneDrive\Escritorio\Programas\C++\SalonPro_core\Caja\obj\Debug\Caja.PagUsuario.resources
 C:\Users\uriel\OneDrive\Escritorio\Programas\C++\SalonPro_core\Caja\obj\Debug\Caja.Admin.AgregarUsuario.resources
+C:\Users\uriel\Downloads\SalonPro\Caja\obj\Debug\Caja.csproj.AssemblyReference.cache
+C:\Users\uriel\Downloads\SalonPro\Caja\bin\Debug\Caja.exe.config
+C:\Users\uriel\Downloads\SalonPro\Caja\bin\Debug\Caja.exe
+C:\Users\uriel\Downloads\SalonPro\Caja\bin\Debug\Caja.pdb
+C:\Users\uriel\Downloads\SalonPro\Caja\obj\Debug\Caja.Admin.AgregarUsuario.resources
+C:\Users\uriel\Downloads\SalonPro\Caja\obj\Debug\Caja.PagAdmin.resources
+C:\Users\uriel\Downloads\SalonPro\Caja\obj\Debug\Caja.Contraseña.resources
+C:\Users\uriel\Downloads\SalonPro\Caja\obj\Debug\Caja.Login.resources
+C:\Users\uriel\Downloads\SalonPro\Caja\obj\Debug\Caja.PagUsuario.resources
+C:\Users\uriel\Downloads\SalonPro\Caja\obj\Debug\Caja.Properties.Resources.resources
+C:\Users\uriel\Downloads\SalonPro\Caja\obj\Debug\Caja.csproj.GenerateResource.cache
+C:\Users\uriel\Downloads\SalonPro\Caja\obj\Debug\Caja.csproj.CoreCompileInputs.cache
+C:\Users\uriel\Downloads\SalonPro\Caja\obj\Debug\Caja.exe
+C:\Users\uriel\Downloads\SalonPro\Caja\obj\Debug\Caja.pdb

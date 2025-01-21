@@ -7,6 +7,14 @@ namespace Infrastructure.Data.Context
     public class SalonDbContext : DbContext
     {
         public SalonDbContext(DbContextOptions<SalonDbContext> options) : base(options) { }
+        //public SalonDbContext() : base(new DbContextOptionsBuilder<SalonDbContext>().UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\uriel\\Downloads\\SalonPro\\Infrastructure\\SalonProDB.mdf;Integrated Security=True").Options) { }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            //string con = ConfigurationManager.ConnectionStrings["CN"].ConnectionString;
+            optionsBuilder.UseSqlServer(
+                "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\uriel\\Downloads\\SalonPro\\Infrastructure\\SalonProDB.mdf;Integrated Security=True",
+                b => b.MigrationsAssembly("Infrastructure")); // Asegúrate de usar el nombre del ensamblado donde quieres las migraciones
+        }
 
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Service> Services { get; set; }
@@ -15,7 +23,6 @@ namespace Infrastructure.Data.Context
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<Staff> Staff { get; set; }
         public DbSet<StaffService> StaffServices { get; set; }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<StaffService>()

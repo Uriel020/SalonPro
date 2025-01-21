@@ -14,6 +14,6 @@ namespace Domain.Entities
         public string Description { get; set; }
 
         public Category Category { get; set; }
-        public ICollection<Service> Services { get; set; }
+        public ICollection<Service>? Services { get; set; }
     }
 }
