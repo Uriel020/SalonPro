@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Domain.Entities;
 
 namespace Domain.Entities
 {
@@ -15,8 +16,14 @@ namespace Domain.Entities
         public decimal DiscountAmount { get; set; } // Monto de descuento
         public InvoiceStatus Status { get; set; } // Estado de la factura
         public DateTime CreatedDate { get; set; } = DateTime.UtcNow; // Fecha de creación
+        public User User { get; set; }
+
+        // Relación con Order
+        public ICollection<Order> Orders { get; set; } = new List<Order>();
     }
 
+    // Relación con User
+    
     public enum InvoiceStatus
     {
         Pending,

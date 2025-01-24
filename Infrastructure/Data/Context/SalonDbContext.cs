@@ -8,6 +8,12 @@ namespace Infrastructure.Data.Context
     {
         public SalonDbContext(DbContextOptions<SalonDbContext> options) : base(options) { }
 
+        public SalonDbContext()
+            : base(new DbContextOptionsBuilder<SalonDbContext>()
+                   .UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\uriel\\Downloads\\SalonPro\\Infrastructure\\SalonProDB.mdf;Integrated Security=True")
+                   .Options)
+        {
+        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
@@ -23,7 +29,7 @@ namespace Infrastructure.Data.Context
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
-        public DbSet<PaymentMethod> PaymentMethods { get; set; }
+        public DbSet<paymentMethod> PaymentMethods { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<UserLikedProduct> UserLikedProducts { get; set; }
@@ -45,7 +51,7 @@ namespace Infrastructure.Data.Context
             modelBuilder.Entity<Appointment>()
                 .HasOne(a => a.User)  // Cambié Customer a User
                 .WithMany(u => u.Appointments)
-                .HasForeignKey(a => a.StaffId);
+                .HasForeignKey(a => a.UserId);
 
             modelBuilder.Entity<Appointment>()
                 .HasOne(a => a.Service)
@@ -58,9 +64,9 @@ namespace Infrastructure.Data.Context
                 .HasForeignKey(i => i.UserId);
 
             modelBuilder.Entity<Invoice>()
-                .HasMany(i => i.Orders)
-                .WithOne(o => o.Invoice)
-                .HasForeignKey(o => o.InvoiceId);
+            .HasMany(i => i.Orders)
+            .WithOne(o => o.Invoice)
+            .HasForeignKey(o => o.InvoiceId);
 
             modelBuilder.Entity<ShoppingCart>()
                 .HasOne(sc => sc.User)  // Cambié Customer a User

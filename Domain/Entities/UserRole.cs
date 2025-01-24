@@ -1,11 +1,11 @@
-namespace Domain.Entities
+锘縩amespace Domain.Entities
 {
     public class UserRole
     {
-        public int UserId { get; set; } // Relaci髇 con el usuario
-        public int RoleId { get; set; } // Relaci髇 con el rol
+        public int UserId { get; set; } // Relaci贸n con el usuario
+        public int RoleId { get; set; } // Relaci贸n con el rol
 
-        public User User { get; set; } // Propiedad de navegaci髇 para el usuario
-        public Role Role { get; set; } // Propiedad de navegaci髇 para el rol
+        public User User { get; set; } // Propiedad de navegaci贸n para el usuario
+        public Role Role { get; set; } // Propiedad de navegaci贸n para el rol
     }
 }

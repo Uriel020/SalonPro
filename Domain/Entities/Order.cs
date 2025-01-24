@@ -1,4 +1,5 @@
 ﻿using System;
+using Domain.Entities;
 
 namespace Domain.Entities
 {
@@ -11,5 +12,7 @@ namespace Domain.Entities
         public decimal DiscountAmount { get; set; } // Descuento aplicado, si aplica
         public int UserId { get; set; } // Relación con el usuario (si corresponde)
         public User User { get; set; } // Propiedad de navegación para la relación con el usuario
+        public int InvoiceId { get; set; }
+        public Invoice Invoice { get; set; }
     }
 }

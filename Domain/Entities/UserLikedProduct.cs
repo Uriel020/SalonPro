@@ -1,13 +1,13 @@
-using System;
+锘縰sing System;
 
 namespace Domain.Entities
 {
     public class UserLikedProduct
     {
-        public int UserId { get; set; } // Relaci髇 con el usuario
-        public int ProductId { get; set; } // Relaci髇 con el producto
+        public int UserId { get; set; } // Relaci贸n con el usuario
+        public int ProductId { get; set; } // Relaci贸n con el producto
 
-        public User User { get; set; } // Propiedad de navegaci髇 para el usuario
-        public Product Product { get; set; } // Propiedad de navegaci髇 para el producto
+        public User User { get; set; } // Propiedad de navegaci贸n para el usuario
+        public Product Product { get; set; } // Propiedad de navegaci贸n para el producto
     }
 }

@@ -1,14 +1,13 @@
-using System;
+ï»¿using System;
 
 namespace Domain.Entities
 {
     public class ShoppingCart
     {
-        public int Id { get; set; } // Identificador único del carrito
-        public int UserId { get; set; } // Relación con el usuario
-        public int StatusId { get; set; } // Relación con el estado del carrito
+        public int Id { get; set; } // Identificador Ãºnico del carrito
+        public int UserId { get; set; } // RelaciÃ³n con el usuario
+        public int StatusId { get; set; } // RelaciÃ³n con el estado del carrito
 
-        public User User { get; set; } // Propiedad de navegación para el usuario
-        public CartStatus CartStatus { get; set; } // Propiedad de navegación para el estado del carrito
+        public User User { get; set; } // Propiedad de navegaciÃ³n para el usuario
     }
 }
