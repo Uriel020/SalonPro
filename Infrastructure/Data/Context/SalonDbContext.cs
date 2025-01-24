@@ -38,6 +38,19 @@ namespace Infrastructure.Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Order>()
+        .HasOne(o => o.User)
+       .WithMany(u => u.Orders)
+       .HasForeignKey(o => o.UserId)
+       .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Order>()
+                .HasOne(o => o.Invoice)
+                .WithMany(i => i.Orders)
+                .HasForeignKey(o => o.InvoiceId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+           
             modelBuilder.Entity<Service>()
                 .HasOne(s => s.ServiceType)
                 .WithMany(st => st.Services)
@@ -49,7 +62,7 @@ namespace Infrastructure.Data.Context
                 .HasForeignKey(st => st.CategoryId);
 
             modelBuilder.Entity<Appointment>()
-                .HasOne(a => a.User)  // Cambié Customer a User
+                .HasOne(a => a.User)
                 .WithMany(u => u.Appointments)
                 .HasForeignKey(a => a.UserId);
 
@@ -59,17 +72,17 @@ namespace Infrastructure.Data.Context
                 .HasForeignKey(a => a.ServiceId);
 
             modelBuilder.Entity<Invoice>()
-                .HasOne(i => i.User)  // Cambié Customer a User
+                .HasOne(i => i.User)
                 .WithMany(u => u.Invoices)
                 .HasForeignKey(i => i.UserId);
 
             modelBuilder.Entity<Invoice>()
-            .HasMany(i => i.Orders)
-            .WithOne(o => o.Invoice)
-            .HasForeignKey(o => o.InvoiceId);
+                .HasMany(i => i.Orders)
+                .WithOne(o => o.Invoice)
+                .HasForeignKey(o => o.InvoiceId);
 
             modelBuilder.Entity<ShoppingCart>()
-                .HasOne(sc => sc.User)  // Cambié Customer a User
+                .HasOne(sc => sc.User)
                 .WithMany(u => u.ShoppingCarts)
                 .HasForeignKey(sc => sc.UserId);
 

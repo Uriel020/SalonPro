@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XSpayrh9wmY3HE9ZqRaGW8RGjc4GSAAudnxhYIjpX6ZXolZHc6cE4QBJj8rFXuUWK+yyzHMcVa9FIQLnwJgYQg==",
+  "dgSpecHash": "6huVyQ1XcOuxHpBeHF2onInNLI4TSSOPmW3atV4zTozoW5+GADlmb0zGjO3SQNHDaZUC4f4elAswKQ+FyLKG2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\uriel\\Downloads\\SalonPro\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\uriel\\downloads\\salonpro\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\uriel\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\uriel\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

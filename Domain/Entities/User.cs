@@ -26,4 +26,6 @@ public class User
 
     // Relación con ShoppingCart
     public ICollection<ShoppingCart> ShoppingCarts { get; set; } = new List<ShoppingCart>();
+
+    public ICollection<Order> Orders { get; set; } = new List<Order>();
 }
