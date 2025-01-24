@@ -63,6 +63,16 @@ namespace Caja.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Artboard_3 {
+            get {
+                object obj = ResourceManager.GetObject("Artboard 3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Carnicería_Popular_1__removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Carnicería_Popular_1_-removebg-preview", resourceCulture);

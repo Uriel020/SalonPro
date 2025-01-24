@@ -1,26 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
     public class Appointment
     {
-        public int AppointmentId { get; set; }
+        public int Id { get; set; }
         public int CustomerId { get; set; }
         public int ServiceId { get; set; }
         public int StaffId { get; set; }
         public DateTime AppointmentDateTime { get; set; }
-        public string AppointmentStatus { get; set; }
+        public AppointmentStatus Status { get; set; } // Cambiado a enum
         public decimal TotalAmount { get; set; }
-        public string Comment { get; set; }
+        public string Comment { get; set; } // Podrías añadir una longitud máxima
         public int DurationInMinutes { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.UtcNow; // Valor predeterminado
+    }
 
-        public Customer Customer { get; set; }
-        public Service Service { get; set; }
-        public Staff Staff { get; set; }
+    public enum AppointmentStatus
+    {
+        Pending,
+        Confirmed,
+        Cancelled,
+        Completed
     }
 }

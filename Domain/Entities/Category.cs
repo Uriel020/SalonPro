@@ -8,10 +8,8 @@ namespace Domain.Entities
 {
     public class Category
     {
-        public int CategoryId { get; set; }
+        public int id { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
-
-        public ICollection<ServiceType> ServiceTypes { get; set; }
+        public string? Description { get; set; }
     }
 }

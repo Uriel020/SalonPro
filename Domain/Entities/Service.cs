@@ -1,22 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
     public class Service
     {
-        public int ServiceId { get; set; }
-        public int ServiceTypeId { get; set; }
-        public string Description { get; set; }
-        public decimal Price { get; set; }
-        public decimal DiscountPrice { get; set; }
-        public bool State { get; set; }
+        public int Id { get; set; } // Identificador único del servicio
+        public int ServiceTypeId { get; set; } // Relación con el tipo de servicio
+        public string Description { get; set; } // Descripción del servicio
+        public decimal Price { get; set; } // Precio del servicio
+        public bool IsActive { get; set; } // Estado del servicio (activo/inactivo)
 
-        public ServiceType ServiceType { get; set; }
-        public ICollection<Appointment> Appointments { get; set; }
-        public ICollection<StaffService> StaffServices { get; set; }
+        public ServiceType ServiceType { get; set; } // Propiedad de navegación para el tipo de servicio
+        public ICollection<Appointment> Appointments { get; set; } // Relación con las citas
     }
 }

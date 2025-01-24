@@ -122,5 +122,8 @@
   <ItemGroup>
     <None Include="Resources\Carnicería_Popular_1_-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
