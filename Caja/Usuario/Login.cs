@@ -32,10 +32,12 @@ namespace Caja
             if(txtUser.Text != UsuarioAdmin && txtClave.Text != ClaveAdmin)
             {
                 new PagUsuario().Show();
+                this.Hide();
             }
             else
             {
                 new PagAdmin().Show();
+                this.Hide();
             }
         }
     }

@@ -21,9 +21,6 @@ public class User
     // Relación con Appointment
     public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 
-    // Relación con Invoice
-    public ICollection<Invoice> Invoices { get; set; } = new List<Invoice>();
-
     // Relación con ShoppingCart
     public ICollection<ShoppingCart> ShoppingCarts { get; set; } = new List<ShoppingCart>();
 

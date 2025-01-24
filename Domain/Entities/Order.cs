@@ -1,18 +1,28 @@
 ﻿using System;
-using Domain.Entities;
+using System.Collections.Generic;
 
 namespace Domain.Entities
 {
     public class Order
     {
-        public int Id { get; set; } // Identificador único
-        public DateTime OrderDate { get; set; } // Fecha de la orden
-        public decimal Total { get; set; } // Monto total de la orden
-        public decimal TaxAmount { get; set; } // Monto de impuestos, si aplica
-        public decimal DiscountAmount { get; set; } // Descuento aplicado, si aplica
-        public int UserId { get; set; } // Relación con el usuario (si corresponde)
-        public User User { get; set; } // Propiedad de navegación para la relación con el usuario
-        public int InvoiceId { get; set; }
-        public Invoice Invoice { get; set; }
+        public int Id { get; set; }
+        public int UserId { get; set; }
+        public DateTime OrderDate { get; set; }
+        public decimal Total { get; set; }
+        public int StateId { get; set; }
+        public int PaymentMethodId { get; set; }
+        public int CartId { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public string CreatedBy { get; set; } = "System";
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+        public string UpdatedBy { get; set; } = "System";
+        public DateTime? DeletedAt { get; set; }
+        public string DeletedBy { get; set; }
+
+        public User User { get; set; }
+        public OrderStatus State { get; set; }
+        public PaymentMethod PaymentMethod { get; set; }
+        public ShoppingCart Cart { get; set; }
+        public ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
     }
 }

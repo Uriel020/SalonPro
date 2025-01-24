@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Domain.Entities
 {
@@ -18,5 +19,16 @@ namespace Domain.Entities
         public string Size { get; set; } // Tamaño del producto
         public string ImageUrl { get; set; } // URL de la imagen del producto
         public DateTime ExpiryDate { get; set; } // Fecha de caducidad del producto
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow; // Fecha de creación
+        public string CreatedBy { get; set; } = "System"; // Usuario que creó el registro
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow; // Fecha de última actualización
+        public string UpdatedBy { get; set; } = "System"; // Usuario que realizó la última actualización
+        public DateTime? DeletedAt { get; set; } // Fecha de eliminación lógica
+        public string DeletedBy { get; set; } // Usuario que eliminó lógicamente el registro
+
+        // Relación con CartDetails
+        public ICollection<CartDetail> CartDetails { get; set; } = new List<CartDetail>();
+
+        public ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
     }
 }
