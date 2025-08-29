@@ -16,8 +16,12 @@
 
 # OS generated files
 .DS_Store
-=======
-*.userprefs
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
 # Build results
 **/[Dd]ebug/
@@ -98,6 +102,25 @@ artifacts/
 
 # Others
 ClientBin/
+~$*
+*~
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+*.pfx
+*.publishsettings
+orleans.codegen.cs
+
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+# Local History
+.localhistory/
+
+# Visual Studio History (VSHistory)
+.vshistory/
 ~$*
 *~
 *.dbmdl
